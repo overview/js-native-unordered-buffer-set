@@ -44,10 +44,25 @@ UnorderedBufferSet::contains(const char* s, size_t len)
   return this->set.count(str) != 0;
 }
 
+static size_t
+count_char_in_str(char ch, const char* s, size_t len) {
+  size_t ret = 0;
+
+  while (len > 0) {
+    if (*s == ch) ret++;
+    len--;
+    s++;
+  }
+
+  return ret;
+}
+
 void
 UnorderedBufferSet::insertStringsSeparatedByNewlines(const char* s, size_t len) {
   const char* start = s;
   const char* end = s + len;
+
+  this->set.reserve(count_char_in_str('\n', s, len) + 1);
 
   for (;s < end; s++) {
     if (*s == '\n') {
