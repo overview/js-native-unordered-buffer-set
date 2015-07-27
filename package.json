@@ -1,0 +1,40 @@
+{
+  "name": "js-native-unordered-buffer-set",
+  "version": "0.0.1",
+  "description": "C++ unordered_set, for Node Buffers",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bindings": "^1.2.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha",
+    "install": "node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/overview/js-native-unordered-buffer-set.git"
+  },
+  "keywords": [
+    "unordered_set",
+    "buffer",
+    "set",
+    "string",
+    "utf-8",
+    "fast",
+    "native"
+  ],
+  "author": "Adam Hooper <adam@adamhooper.com>",
+  "license": "AGPL-3.0",
+  "gypfile": true,
+  "bugs": {
+    "url": "https://github.com/overview/js-native-unordered-buffer-set/issues"
+  },
+  "homepage": "https://github.com/overview/js-native-unordered-buffer-set"
+}
