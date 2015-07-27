@@ -121,11 +121,12 @@ UnorderedBufferSet::findAllMatches(const char* s, size_t len, size_t maxNgramSiz
   std::vector<PooledString> ret;
   std::deque<const char*> tokenStarts;
   const char* lastP = s;
+  const char* end = s + len;
 
   tokenStarts.push_back(s);
 
   while (true) {
-    const char* p = static_cast<const char*>(memchr(lastP, ' ', len));
+    const char* p = static_cast<const char*>(memchr(lastP, ' ', end - lastP));
     if (p == NULL) p = s + len;
 
     // Add s[tokenStarts[0],pos), s[tokenStarts[1],pos), ... for every token
