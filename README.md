@@ -12,14 +12,16 @@ But it's far, far faster than a Node hashtable.
 Usage
 -----
 
-var NativeSet = require('js-native-unsorted-buffer-set');
+```javascript
+var BufferSet = require('js-native-unsorted-buffer-set');
 // Input is a single Buffer: newline-separated Strings
-var set = new NativeSet(new Buffer('foo\nbar\nbaz\nthe foo', 'utf-8'));
+var set = new BufferSet(new Buffer('foo\nbar\nbaz\nthe foo\nmoo', 'utf-8'));
 
 console.log(set.contains('foo')); // true
 console.log(set.contains('moo')); // false
 
 console.log(set.findAllMatches('the foo drove over the moo', 2)); // [ 'the foo', 'foo', 'moo' ]
+```
 
 findAllMatches
 --------------
