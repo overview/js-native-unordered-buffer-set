@@ -2,7 +2,7 @@
   "targets": [
     {
       "target_name": "unordered_buffer_set",
-      "sources": [ "src/unordered_buffer_set.cc" ],
+      "sources": [ "src/unordered_buffer_set.cc", "src/farmhash.cc" ],
       "cflags": [ "-std=c++11", "-Wall" ],
       "xcode_settings": {
         "OTHER_CFLAGS": [ "-std=c++11", "-Wall" ],
